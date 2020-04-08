@@ -1,0 +1,17 @@
+@import "../../../stylesSettings/_variables";
+@import "../../../assets/fonts/_fonts";
+@import "../../../stylesSettings/keyframes";
+
+.user__avatar {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

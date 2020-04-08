@@ -1,0 +1,19 @@
+@import "../../stylesSettings/_variables";
+@import "../../assets/fonts/_fonts";
+@import "../../stylesSettings/keyframes";
+
+.header {
+  padding: 4rem 0 0 0;
+  background-color: $light;
+
+  .block__wrapper {
+    @include dis-flex(space-between, center);
+  }
+}
+
+.logo__link {
+  display: block;
+  font-size: $f24;
+  font-family: $ltb;
+  color: $dark-grey;
+}

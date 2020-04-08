@@ -1,0 +1,16 @@
+@import "../../../stylesSettings/_variables";
+@import "../../../assets/fonts/_fonts";
+@import "../../../stylesSettings/keyframes";
+
+.truck {
+    margin: 2rem 1rem;
+    padding: 5rem;
+    background-color: $green;
+
+    &-wrapper {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,20 @@
+@import "../src/stylesSettings/reset";
+@import "../src/stylesSettings/variables";
+@import "../src/assets/fonts/fonts";
+@import "../src/stylesSettings/keyframes";
+
+.block {
+    width: 100%;
+    @include flex-center;
+    background-color: $light;
+
+    &__wrapper {
+        width: 90%;
+    }
+}
+
+.navigation-panel {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}

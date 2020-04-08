@@ -1,0 +1,17 @@
+@import "../../stylesSettings/reset";
+@import "../../stylesSettings/_variables";
+@import "../../assets/fonts/_fonts";
+@import "../../stylesSettings/keyframes";
+
+.infotile {
+    display: flex;
+    align-items: center;
+    font-family: $ltb;
+    font-size: $f20;
+
+    &__info {
+        margin-left: 5px;
+        font-family: $lt;
+        font-size: $f18;
+    }
+}
