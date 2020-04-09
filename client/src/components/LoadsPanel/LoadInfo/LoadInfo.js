@@ -63,12 +63,12 @@ export default function TruckInfo(props) {
     return (
         <div className="load-wrapper">
             <form className='load' onSubmit={postLoad}>
-                {!isLoadFinished && <h4 className='load__assigned'>{load.assigned_to
+                {!isLoadFinished && <h4 className='load__status'>{load.assigned_to
                     ? 'Assigned'
                     : 'Not assigned'
                 }</h4>}
 
-                {showAlertCantAssign && <h5>
+                {showAlertCantAssign && <h5 className='load__status'>
                     All matched trucks is on load, try again later
                 </h5>}
                 

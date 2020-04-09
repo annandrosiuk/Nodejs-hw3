@@ -4,10 +4,10 @@
 
 .signup {
   background-color: $light;
+  height: calc(100vh - 11.9rem);
 
   .block__wrapper {
-    display: flex;
-    justify-content: flex-start;
+    @include flex-center;
     flex-direction: column;
   }
 
@@ -18,31 +18,72 @@
     margin: 4rem 0;
   }
 
+  .nav{
+    align-self: center;
+  }
+}
+
+.form {
+  max-width: 60rem;
+  @include dis-flex(flex-start, flex-start);
+  flex-direction: column;
+
+  &__group {
+    width: 100%;
+    @include dis-flex(space-between, center);
+    flex-wrap: wrap;
+
+    .form__input {
+      width: 45%;
+    }
+  }
+
   &__label {
     font-size: $f18;
     font-family: $lt;
   }
 
   &__input {
-    width: 100%;
+    width: calc(100% - 2rem);
     height: 3rem;
     font-size: $f16;
+    padding: 1rem;
+    opacity: 0.6;
+    font-family: $lt;
+    font-weight: 400;
+    margin: 0.5rem 0;
+    transition: ease-in-out 0.3s;
+    border: 1px solid $light-grey;
+    background-color: $light;
+    border-radius: 2rem;
+
+    &:focus {
+      outline: none;
+      opacity: 1;
+      border: 1px solid rgba($color: $red, $alpha: 0.7);
+    }
+  }
+
+  &__wrapper {
+    @include dis-flex(flex-start, center);
+    margin: 1rem 0;
   }
 
   &__radio {
-    margin: 0 1rem 0 2rem;
+    margin: 0 0.5rem 0 2rem;
   }
 
-  &__button{
+  &__button {
     padding: 1rem 2rem;
     border-radius: 3rem;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     margin: 2rem 0;
     font-size: $f16;
+    align-self: center;
 
-    &:hover{
+    &:hover {
       background-color: $red;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       color: $white;
     }
   }

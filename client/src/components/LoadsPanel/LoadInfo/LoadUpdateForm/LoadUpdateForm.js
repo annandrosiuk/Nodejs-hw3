@@ -54,7 +54,7 @@ export default function TruckUpdateForm(props) {
                 >
                     <label htmlFor='length'> Length: </label>
                     <input
-                        className="signup__input"
+                        className="form__input"
                         type='number'
                         name='length'
                         value={length}
@@ -64,7 +64,7 @@ export default function TruckUpdateForm(props) {
 
                     <label htmlFor='width'> Width: </label>
                     <input
-                        className="signup__input"
+                        className="form__input"
                         type='number'
                         name='width'
                         value={width}
@@ -74,7 +74,7 @@ export default function TruckUpdateForm(props) {
 
                     <label htmlFor='height'> Height: </label>
                     <input
-                        className="signup__input"
+                        className="form__input"
                         type='number'
                         name='height'
                         value={height}
@@ -84,7 +84,7 @@ export default function TruckUpdateForm(props) {
 
                     <label htmlFor='payload'> Payload: </label>
                     <input
-                        className="signup__input"
+                        className="form__input"
                         type='number'
                         name='payload'
                         value={payload}

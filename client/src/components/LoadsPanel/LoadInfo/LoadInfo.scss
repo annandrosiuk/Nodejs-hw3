@@ -5,12 +5,22 @@
 .load {
     margin: 2rem 1rem;
     padding: 5rem;
-    background-color: $green;
+    border: 1px solid rgba($color: $light-grey, $alpha: 0.4);
+    background-color: rgba($color: $light-grey, $alpha: 0.1);
+    width: 100%;
 
     &-wrapper {
         position: relative;
-
         display: flex;
         flex-direction: column;
+        margin: 1rem;
+        width: calc(25% - 2rem);
+    }
+
+    &__status {
+        font-size: $f14;
+        font-family: $lt;
+        padding: 1rem 0;
+        max-width: 100%;
     }
 }

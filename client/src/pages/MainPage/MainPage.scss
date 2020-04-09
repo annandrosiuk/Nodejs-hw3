@@ -5,7 +5,7 @@
 
 .main {
   position: relative;
-  height: calc(100vh - 11rem);
+  height: calc(100vh - 11.9rem);
   background-color: $light;
 
   .block__wrapper {
@@ -16,7 +16,7 @@
     max-width: 50%;
   }
 
-  &__header {
+  &__title {
     font-size: $f40;
     font-family: $ltb;
   }
@@ -30,9 +30,9 @@
   &__image {
     @include basic(50rem, 80rem);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("../../assets/images/Logo.png");
+    background-image: url("../../assets/images/logo.svg");
   }
 }
 

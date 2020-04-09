@@ -57,7 +57,7 @@ export default function UserInfo(props) {
                     <UserAvatar undecodedImg={user.avatarImg} />
 
                     <div className='user__info'>
-                        <h2> Info: </h2>
+                        <div className='user__descr'> Your info: </div>
 
                         <InfoTile
                             label={'Username:'}

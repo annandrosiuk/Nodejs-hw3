@@ -5,36 +5,35 @@
 
 .user__wrapper {
     @include dis-flex(space-around, center);
-    margin: 10rem 0;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba($color: $light-grey, $alpha: .5) ;
 }
 
 .user {
     &__profile {
-        display: flex;
+        @include dis-flex(center, stretch);
         flex-direction: column;
-        align-items: stretch;
-
         width: 100%;
     }
 
     &__role {
         text-align: center;
-        margin: 10rem 0;
+        margin: 5rem 0;
+        font-size: $f24;
     }
 
     &__info {
         position: relative;
     }
 
-    &__updateuser,
-    &__updatepassword {
-        top: 0;
-        left: 0;
+    &__descr {
+        font-size: $f18;
+        font-family: $lt;
+        text-decoration: underline;
+    }
 
-        width: 100%;
-        height: 90%;
-
-        background-color: lightgray;
+    &__panel {
+        margin: 2rem 0 0 0;
     }
 
     &__button {

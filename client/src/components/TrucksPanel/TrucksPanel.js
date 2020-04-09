@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './TrucksPanel.scss';
 
 import TruckInfo from './TruckInfo/TruckInfo';
 import NewTruckForm from './NewTruckForm/NewTruckForm';
@@ -33,8 +32,8 @@ export default function TrucksPanel() {
     return (
         <div className="block">
             <div className="block__wrapper">
-                <div className='trucks'>
-                    <h2 className='trucks__header'> Your Trucks: </h2>
+                <div className='loads'>
+                    <h2 className='loads__title'> Your Trucks: </h2>
 
                     <button
                         className="user__button"
@@ -47,10 +46,10 @@ export default function TrucksPanel() {
                         }
                     </button>
 
-                    {showNewTruckForm && <NewTruckForm className='trucks__newtruck' />}
+                    {showNewTruckForm && <NewTruckForm className='loads__newload' />}
 
                     {trucks
-                        ? <div className='trucks__panel'>
+                        ? <div className='loads__panel'>
                             {trucks.map(truck => {
                                 return <TruckInfo
                                     key={truck._id}

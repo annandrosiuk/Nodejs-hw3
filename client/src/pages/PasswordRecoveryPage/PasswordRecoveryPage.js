@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect, Link } from 'react-router-dom';
+import './PasswordRecovery.scss'
 
 import axios from 'axios';
 const API_URL = process.env.REACT_APP_API_URL;
@@ -97,93 +98,84 @@ export default function PasswordRecoveryPage() {
     }
 
     return (
-        <div className="block ">
+        <div className="block recovery">
             <div className="block__wrapper">
-                <form className='recoverypassword' onSubmit={checkRecoverPassword}>
-                    <h1 className="signup__title"> Password Recovery: </h1>
+                <form className='recoverypassword form' onSubmit={checkRecoverPassword}>
+                    <h1 className="recovery__title"> Password Recovery: </h1>
 
-                    <p> To change password please enter your info and new password </p>
+                    <p className="recovery__hint"> To change password please enter your info and new password </p>
 
                     {showAlertMessage && <p className='recoverypassword__alert'> {alertMessage} </p>}
 
-                    <label className="signup__label" htmlFor='username'> Username: </label>
                     <input
-                        className="signup__input"
+                        className="form__input"
                         type='text'
                         name='username'
+                        placeholder="Username"
                         value={username}
                         onChange={handleUsernameInput}
                         required
                     />
-                    <hr />
 
-                    <label className="signup__label" htmlFor='email'> Email: </label>
-                    <input
-                        className="signup__input"
-                        type='text'
-                        name='email'
-                        value={email}
-                        onChange={handleEmailInput}
-                        required
-                    />
-                    <hr />
+                    <div className="form__group">
+                        <input
+                            className="form__input"
+                            type='text'
+                            name='firstName'
+                            placeholder="First Name"
+                            value={firstName}
+                            onChange={handleFirstNameInput}
+                            required
+                        />
+                        <input
+                            className="form__input"
+                            type='text'
+                            name='lastName'
+                            placeholder="Last Name"
+                            value={lastName}
+                            onChange={handleLastNameInput}
+                            required
+                        />
+                        <input
+                            className="form__input"
+                            type='email'
+                            name='email'
+                            value={email}
+                            placeholder="Email"
+                            onChange={handleEmailInput}
+                            required
+                        />
+                        <input
+                            className="form__input"
+                            type='text'
+                            name='mobileNumber'
+                            value={mobileNumber}
+                            placeholder="Mobile Number"
+                            onChange={handleMobileNumberInput}
+                            required
+                        />
+                    </div>
 
-                    <label className="signup__label" htmlFor='firstName'> First Name: </label>
                     <input
-                        className="signup__input"
-                        type='text'
-                        name='firstName'
-                        value={firstName}
-                        onChange={handleFirstNameInput}
-                        required
-                    />
-                    <hr />
-
-                    <label className="signup__label" htmlFor='lastName'> Last Name: </label>
-                    <input
-                        className="signup__input"
-                        type='text'
-                        name='lastName'
-                        value={lastName}
-                        onChange={handleLastNameInput}
-                        required
-                    />
-                    <hr />
-
-                    <label className="signup__label" htmlFor='mobileNumber'> Mobile Number: </label>
-                    <input
-                        className="signup__input"
-                        type='text'
-                        name='mobileNumber'
-                        value={mobileNumber}
-                        onChange={handleMobileNumberInput}
-                        required
-                    />
-                    <hr />
-
-                    <label className="signup__label" htmlFor='newPassword'> New password: </label>
-                    <input
-                        className="signup__input"
+                        className="form__input"
                         type='password'
                         name='newPassword'
+                        placeholder="New password"
                         value={newPassword}
                         onChange={handleNewPasswordInput}
                         required
                     />
-                    <hr />
-
-                    <label className="signup__label" htmlFor='checkNewPassword'> Repeat new password: </label>
                     <input
-                        className="signup__input"
+                        className="form__input"
                         type='password'
                         name='checkNewPassword'
+                        placeholder="Repeat new password"
                         value={checkNewPassword}
                         onChange={handleCheckNewPasswordInput}
                         required
                     />
-                    <hr />
 
-                    <button className="signup__button" type='submit'> Submit password recovery </button>
+                    <button className="form__button" type='submit'> Submit password recovery </button>
 
                     <nav className="nav">
                         <ul className="nav__list">

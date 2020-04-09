@@ -68,98 +68,89 @@ export default function SignupPage() {
             <div className="block__wrapper">
                 <h1 className="signup__title"> Sign Up: </h1>
 
-                <form className="signup__form" onSubmit={fetchSignup}>
+                <form className="form" onSubmit={fetchSignup}>
+                    <div className="form__group">
+                        <input
+                            className="form__input"
+                            type='text'
+                            name='firstName'
+                            placeholder="First Name"
+                            value={firstName}
+                            onChange={handleFirstNameInput}
+                            required
+                        />
+                        <input
+                            className="form__input"
+                            type='text'
+                            name='lastName'
+                            placeholder="Last Name"
+                            value={lastName}
+                            onChange={handleLastNameInput}
+                            required
+                        />
+                        <input
+                            className="form__input"
+                            type='email'
+                            name='email'
+                            value={email}
+                            placeholder="Email"
+                            onChange={handleEmailInput}
+                            required
+                        />
+                        <input
+                            className="form__input"
+                            type='text'
+                            name='mobileNumber'
+                            value={mobileNumber}
+                            placeholder="Mobile Number"
+                            onChange={handleMobileNumberInput}
+                            required
+                        />
+                    </div>
 
-                    <label className="signup__label" htmlFor='firstName'> First Name: </label>
                     <input
-                        className="signup__input"
-                        type='text'
-                        name='firstName'
-                        value={firstName}
-                        onChange={handleFirstNameInput}
-                        required
-                    />
-                    <hr />
-
-                    <label className="signup__label" htmlFor='lastName'> Last Name: </label>
-                    <input
-                        className="signup__input"
-                        type='text'
-                        name='lastName'
-                        value={lastName}
-                        onChange={handleLastNameInput}
-                        required
-                    />
-                    <hr />
-
-                    <label className="signup__label" htmlFor='username'> Username: </label>
-                    <input
-                        className="signup__input"
+                        className="form__input"
                         type='text'
                         name='username'
+                        placeholder="Username"
                         value={username}
                         onChange={handleUsernameInput}
                         required
                     />
-                    <hr />
-
-                    <label className="signup__label" htmlFor='email'> Email: </label>
                     <input
-                        className="signup__input"
-                        type='email'
-                        name='email'
-                        value={email}
-                        onChange={handleEmailInput}
-                        required
-                    />
-                    <hr />
-
-                    <label className="signup__label" htmlFor='mobileNumber'> Mobile Number: </label>
-                    <input
-                        className="signup__input"
-                        type='text'
-                        name='mobileNumber'
-                        value={mobileNumber}
-                        onChange={handleMobileNumberInput}
-                        required
-                    />
-                    <hr />
-
-                    <label className="signup__label" htmlFor='password'> Password: </label>
-                    <input
-                        className="signup__input"
+                        className="form__input"
                         type='password'
                         name='password'
                         value={password}
+                        placeholder="Password"
                         onChange={handlePasswordInput}
                         required
                     />
-                    <hr />
 
-                    <h4> You are: </h4>
-                    <div>
+                    <div className="form__wrapper">
+                        <div className="form__label"> You are: </div>
                         <input
-                            className="signup__radio"
+                            className="form__radio"
                             type='radio'
                             id='driver'
                             name='role'
                             value='driver'
                             onChange={handleRadioDriver}
                         />
-                        <label className="signup__label" htmlFor='driver'> Driver </label>
+                        <label className="form__label" htmlFor='driver'> Driver </label>
 
                         <input
-                            className="signup__radio"
+                            className="form__radio"
                             type='radio'
                             id='shipper'
                             name='role'
                             value='shipper'
                             onChange={handleRadioShipper}
                         />
-                        <label className="signup__label" htmlFor='shipper'> Shipper </label>
+                        <label className="form__label" htmlFor='shipper'> Shipper </label>
                     </div>
 
-                    <button className="signup__button" type='submit'> Sign Up </button>
+                    <button className="form__button" type='submit'> Sign Up </button>
 
                     <nav className="nav">
                         <ul className="nav__list">

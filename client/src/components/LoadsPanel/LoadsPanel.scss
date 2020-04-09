@@ -1,5 +1,22 @@
+@import "../../stylesSettings/_variables";
+@import "../../assets/fonts/_fonts";
+@import "../../stylesSettings/keyframes";
+
 .loads {
+    @include dis-flex(flex-start, flex-start);
+    flex-direction: column;
+    margin: 5rem 0;
+    
+
+    &__title{
+        font-size: $f24;
+        font-family: $ltb;
+        align-self: center;
+    }
+
     &__panel {
-        display: flex;
+        @include dis-flex(flex-start, stretch);
+        flex-wrap: wrap;
+        width: 100%;
     }
 }

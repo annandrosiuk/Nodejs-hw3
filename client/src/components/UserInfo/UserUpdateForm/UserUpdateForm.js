@@ -47,62 +47,69 @@ export default function UserUpdateForm(props) {
     return (
         <div className="updateuser-wrapper">
             <form className={`updateuser ${props.className}`} onSubmit={updateUser}>
-                <h1> Update info: </h1>
+                <h1 className="updateuser__title"> Update info: </h1>
+                <div className="updateuser__group">
+                    <div className="updateuser__info">
+                        <label className="updateuser__label" htmlFor='firstName'> First Name: </label>
+                        <input
+                            className="updateuser__input"
+                            type='text'
+                            name='firstName'
+                            value={firstName}
+                            onChange={handleFirstNameInput}
+                            required
+                        />
+                    </div>
+                    <div className="updateuser__info">
+                        <label className="updateuser__label" htmlFor='lastName'> Last Name: </label>
+                        <input
+                            className="updateuser__input"
+                            type='text'
+                            name='lastName'
+                            value={lastName}
+                            onChange={handleLastNameInput}
+                            required
+                        />
+                    </div>
 
-                <label htmlFor='firstName'> First Name: </label>
-                <input
-                    type='text'
-                    name='firstName'
-                    value={firstName}
-                    onChange={handleFirstNameInput}
-                    required
-                />
-                <hr />
-
-                <label htmlFor='lastName'> Last Name: </label>
-                <input
-                    type='text'
-                    name='lastName'
-                    value={lastName}
-                    onChange={handleLastNameInput}
-                    required
-                />
-                <hr />
-
-                <label htmlFor='username'> Username: </label>
-                <input
-                    type='text'
-                    name='username'
-                    value={username}
-                    onChange={handleUsernameInput}
-                    required
-                />
-                <hr />
-
-                <label htmlFor='email'> Email: </label>
-                <input
-                    type='email'
-                    name='email'
-                    value={email}
-                    onChange={handleEmailInput}
-                    required
-                />
-                <hr />
-
-                <label htmlFor='mobileNumber'> Mobile Number: </label>
-                <input
-                    type='text'
-                    name='mobileNumber'
-                    value={mobileNumber}
-                    onChange={handleMobileNumberInput}
-                    required
-                />
-                <hr />
-
-                <button type='submit'> Submit update </button>
+                    <div className="updateuser__info">
+                        <label className="updateuser__label" htmlFor='email'> Email: </label>
+                        <input
+                            className="updateuser__input"
+                            type='email'
+                            name='email'
+                            value={email}
+                            onChange={handleEmailInput}
+                            required
+                        />
+                    </div>
+                    <div className="updateuser__info">
+                        <label className="updateuser__label" htmlFor='mobileNumber'> Mobile Number: </label>
+                        <input
+                            className="updateuser__input"
+                            type='text'
+                            name='mobileNumber'
+                            value={mobileNumber}
+                            onChange={handleMobileNumberInput}
+                            required
+                        />
+                    </div>
+                </div>
+                <div className="updateuser__info">
+                    <label className="updateuser__label" htmlFor='username'> Username: </label>
+                    <input
+                        className="updateuser__input"
+                        type='text'
+                        name='username'
+                        value={username}
+                        onChange={handleUsernameInput}
+                        required
+                    />
+                </div>
+                <button className="updateuser__button" type='submit'> Submit update </button>
 
             </form>
-        </div>
+        </div >
 
     );
 }

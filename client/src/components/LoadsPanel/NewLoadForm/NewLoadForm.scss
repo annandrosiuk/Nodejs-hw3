@@ -1,5 +1,7 @@
+@import "../../../stylesSettings/_variables";
+@import "../../../assets/fonts/_fonts";
+@import "../../../stylesSettings/keyframes";
+
 .newload {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin: 2rem 0;
 }

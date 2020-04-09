@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './UserPage.scss';
-
 import UserInfo from '../../components/UserInfo/UserInfo';
 import TrucksPanel from '../../components/TrucksPanel/TrucksPanel';
 import LoadsPanel from '../../components/LoadsPanel/LoadsPanel';

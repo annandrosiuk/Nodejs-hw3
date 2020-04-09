@@ -22,30 +22,27 @@ export default function Header() {
     }
 
     return (
-        <React.Fragment>
-            <section className="main block">
-                <div className="block__wrapper">
-
-                    <div className="main__info">
-                        <h1 className="main__header">We make everything to make your life easier</h1>
-                        <p className="main__description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <section className="main block">
+            <div className="block__wrapper">
+                <div className="main__info">
+                    <h1 className="main__title">We make everything to make your life easier</h1>
+                    <p className="main__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        {!isAuthorized && <>
-                            <nav className="nav">
-                                <ul className="nav__list">
-                                    <li className="nav__item"><Link to="/login" className="nav__link">Login</Link></li>
-                                    <li className="nav__item"><Link to="/signup" className="nav__link">Sign up</Link></li>
-                                </ul>
-                            </nav>
-                        </>}
-                    </div>
-
-                    <div className="main__image"></div>
+                    {!isAuthorized && <>
+                        <nav className="nav">
+                            <ul className="nav__list">
+                                <li className="nav__item"><Link to="/login" className="nav__link">Login</Link></li>
+                                <li className="nav__item"><Link to="/signup" className="nav__link">Sign up</Link></li>
+                            </ul>
+                        </nav>
+                    </>}
                 </div>
-            </section>
-        </React.Fragment>
+
+                <div className="main__image"></div>
+            </div>
+        </section>
     );
 }
 

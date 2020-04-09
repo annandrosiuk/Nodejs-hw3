@@ -34,7 +34,7 @@ export default function LoadsPanel() {
         <div className="block">
             <div className="block__wrapper">
                 <div className='loads'>
-                    <h2 className='loads__header'> Your Loads: </h2>
+                    <h2 className='loads__title'> Your Loads: </h2>
 
                     <button className="user__button"
                         type='button'

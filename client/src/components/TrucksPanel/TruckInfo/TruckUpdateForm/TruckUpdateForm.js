@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './TruckUpdateForm.scss';
 
 import axios from 'axios';
 const API_URL = process.env.REACT_APP_API_URL;
@@ -76,7 +75,7 @@ export default function TruckUpdateForm(props) {
 
                     <label htmlFor='truckName'> Name: </label>
                     <input
-                        className="signup__input"
+                        className="form__input"
                         type='text'
                         name='truckName'
                         value={truckName}
@@ -86,7 +85,7 @@ export default function TruckUpdateForm(props) {
 
                     <label htmlFor='brand'> Brand: </label>
                     <input
-                        className="signup__input"
+                        className="form__input"
                         type='text'
                         name='brand'
                         value={brand}
@@ -96,7 +95,7 @@ export default function TruckUpdateForm(props) {
 
                     <label htmlFor='model'> Model: </label>
                     <input
-                        className="signup__input"
+                        className="form__input"
                         type='text'
                         name='model'
                         value={model}

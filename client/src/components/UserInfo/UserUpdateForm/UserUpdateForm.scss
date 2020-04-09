@@ -2,9 +2,84 @@
 @import "../../../assets/fonts/_fonts";
 @import "../../../stylesSettings/keyframes";
 
-.updateuser-wrapper{
-  background-color: red;
+.updateuser-wrapper {
   width: 100%;
-  height: 100%;
-  border: 1px solid black;
+  height: 24rem;
+  position: absolute;
+  top: -24rem;
+  background-color: $light;
+}
+
+.updateuser {
+  @include dis-flex(flex-start, flex-start);
+  flex-direction: column;
+
+  &__title {
+    font-size: $f18;
+    font-family: $lt;
+  }
+
+  &__group {
+    width: 100%;
+    @include dis-flex(space-between, center);
+    flex-wrap: wrap;
+
+    .updateuser__info {
+      width: 47%;
+    }
+  }
+
+  &__info {
+    @include dis-flex(flex-start, flex-start);
+    flex-direction: column;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  &__label {
+    font-size: $f14;
+    font-family: $f16;
+  }
+
+  &__input {
+    width: calc(100% - 3rem);
+    padding: 0.5rem 1rem;
+    font-size: $f14;
+    border: 1px solid $light-black;
+    opacity: 0.6;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+
+    &:focus {
+      border: 1px solid $red;
+      opacity: 1;
+      outline: none;
+    }
+  }
+
+  &__button {
+    border-radius: 3rem;
+    padding: 0.5rem;
+    align-self: center;
+
+    &:hover {
+      background-color: $red;
+      transition: all 0.3s ease-in-out;
+      color: $white;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__alert {
+    @include dis-flex(flex-start, flex-start);
+    background-color: rgba($color: $red, $alpha: 0.9);
+    color: $light;
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    font-size: $f14;
+    margin: 0.5rem 0 0 0;
+  }
 }

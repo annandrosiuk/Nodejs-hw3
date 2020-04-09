@@ -41,9 +41,9 @@ export default function LoginPage() {
 
                 <form className="signup__form" onSubmit={fetchLogin}>
                     <div>
-                        <label className="signup__label" htmlFor='login'> Email or Username: </label>
+                        <label className="form__label" htmlFor='login'> Email or Username: </label>
                         <input
-                            className="signup__input"
+                            className="form__input"
                             type='text'
                             name='login'
                             value={login}
@@ -53,9 +53,9 @@ export default function LoginPage() {
                     </div>
 
                     <div>
-                        <label className="signup__label" htmlFor='password'> Password: </label>
+                        <label className="form__label" htmlFor='password'> Password: </label>
                         <input
-                            className="signup__input"
+                            className="form__input"
                             type='password'
                             name='password'
                             value={password}
@@ -64,9 +64,9 @@ export default function LoginPage() {
                         />
                     </div>
 
-                    <Link className="signup__label" to="/password-recovery"> forgot password? </Link>
+                    <Link className="form__label" to="/password-recovery"> forgot password? </Link>
 
-                    <button className="signup__button" type="submit"> Login </button><br />
+                    <button className="form__button" type="submit"> Login </button><br />
 
                     <nav className="nav">
                         <ul className="nav__list">

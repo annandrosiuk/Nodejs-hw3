@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './TruckInfo.scss';
 
 import InfoTile from '../../InfoTile/InfoTile';
 import TruckUpdateForm from './TruckUpdateForm/TruckUpdateForm';
@@ -39,10 +38,10 @@ export default function TruckInfo(props) {
     }
 
     return (
-        <div className="truck-wrapper">
-            <form className='truck' onSubmit={assignTruck}>
-                <h3 className='truck__name'>{truck.truckName.toUpperCase()}</h3>
-                <h4 className='truck__assigned'>{truck.assigned_to
+        <div className="load-wrapper">
+            <form className='load' onSubmit={assignTruck}>
+                <h3 className='load__status'>{truck.truckName.toUpperCase()}</h3>
+                <h4 className='load__status'>{truck.assigned_to
                     ? 'Assigned'
                     : 'Not assigned'
                 }</h4>
@@ -84,7 +83,7 @@ export default function TruckInfo(props) {
             </button>
             }
 
-            {showTruckUpdateForm && <TruckUpdateForm truck={truck} className='truck-wrapper__updatetruck' />}
+            {showTruckUpdateForm && <TruckUpdateForm truck={truck} className='load-wrapper__updatetruck' />}
         </div>
     );
 }
